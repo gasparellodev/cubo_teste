@@ -1,0 +1,57 @@
+name: Frontend-Production
+
+on:
+  push:
+    branches: [main]
+
+env:
+  CONTAINER_IMAGE: 929907635541.dkr.ecr.sa-east-1.amazonaws.com/gis-cubo:${{ github.sha }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Save EnvVars
+        run: |
+          echo NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL_PROD }} >> .env.production.local
+          echo NEXT_PUBLIC_MAPBOX_STYLE_ID=${{ secrets.NEXT_PUBLIC_MAPBOX_STYLE_ID_PROD }} >> .env.production.local
+          echo NEXT_PUBLIC_MAPBOX_TOKEN=${{ secrets.NEXT_PUBLIC_MAPBOX_TOKEN_PROD }} >> .env.production.local
+          echo NEXT_PUBLIC_MAPBOX_USER_ID=${{ secrets.NEXT_PUBLIC_MAPBOX_USER_ID_PROD }} >> .env.production.local
+          cat .env.production.local
+        shell: bash
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and tag the image
+        run: |
+          docker build . --file Dockerfile --tag $CONTAINER_IMAGE
+
+      - name: Config aws
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SEC }}
+          aws-region: sa-east-1
+
+      - name: Login ECR
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Push into ECR
+        run: |
+          docker push $CONTAINER_IMAGE
+
+      - name: Deploy
+        uses: yantadeu/rancher-deploy-action@v0.0.2
+        env:
+          RANCHER_ACCESS_KEY: ${{ secrets.RANCHER_ACCESS_KEY }}
+          RANCHER_SECRET_KEY: ${{ secrets.RANCHER_SECRET_KEY }}
+          RANCHER_URL_API: "https://rancher.bid.d3.do/v3"
+          SERVICE_NAME: "frontend"
+          DOCKER_IMAGE: ${{ env.CONTAINER_IMAGE }}

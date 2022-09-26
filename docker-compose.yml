@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  next:
+    image: gis-cubo:latest
+    container_name: gis-cubo-container
+    build:
+      context: .
+      dockerfile: Dockerfile

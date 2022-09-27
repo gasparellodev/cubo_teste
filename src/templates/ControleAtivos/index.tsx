@@ -24,7 +24,7 @@ const ControleAtivos = () => {
             <Cards label="Processamento" href="processamento-de-video">
               <CamEngineIcon />
             </Cards>
-            <Cards label="Pós - Processamento" href="">
+            <Cards label="Pós - Processamento" href="pos-processamento-de-video">
               <UserCheckIcon />
             </Cards>
           </S.CardsWrapper>

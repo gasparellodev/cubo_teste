@@ -8,12 +8,14 @@ import DownloadIcon from 'components/icons/DownloadIcon'
 import ArrowLeft from 'components/icons/ArrowLeft'
 import ArrowRight from 'components/icons/ArrowRight'
 import * as S from './styles'
+import ReturnLink from 'components/ReturnLink'
 
 const RelatoriosOptions = () => {
   return (
     <>
       <Header />
       <Container>
+        <ReturnLink href="/geoprocessamento/relatorios" />
         <S.Wrapper>
           <S.Title>Relatórios</S.Title>
           <S.SearchRow>

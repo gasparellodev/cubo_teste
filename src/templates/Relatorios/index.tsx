@@ -20,7 +20,7 @@ const Relatorios = () => {
             <Cards label="Relatórios Técnicos" href="relatorios-options">
               <Contract />
             </Cards>
-            <Cards label="Novo Cadastro" href="cadastro-relatorios">
+            <Cards label="Novo Cadastro" href="relatorios-cadastro">
               <ContractPen />
             </Cards>
           </S.CardsWrapper>

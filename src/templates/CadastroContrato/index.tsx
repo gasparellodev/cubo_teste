@@ -34,7 +34,7 @@ const signInFormSchema = yup.object().shape({
   password: yup.string().required('senha obrigatória')
 })
 
-const CityProblems = () => {
+const CadastroRelatorio = () => {
   const [inputError, setInputError] = useState(false)
 
   const {
@@ -62,120 +62,53 @@ const CityProblems = () => {
       <Container>
         <ReturnLink href="/geoprocessamento/contrato" />
         <S.Wrapper>
-          <S.Title>Cadastro</S.Title>
-
+          <S.Title>Contrato</S.Title>
           <S.Form onSubmit={onSubmit}>
-            <S.FormCollum>
-              <S.TextAreaWrraperFull>
-                <S.LabelTextArea>Tipo de cadastro</S.LabelTextArea>
-                <TextField
-                  placeholder="Tipo de cadastro"
-                  {...register('email')}
-                  error={errors.email?.message || inputError}
-                />
-              </S.TextAreaWrraperFull>
+            <S.TextAreaWrraperFull>
+              <S.LabelTextArea>Nome completo</S.LabelTextArea>
+              <TextField
+                placeholder="Nome completo"
+                {...register('email')}
+                error={errors.email?.message || inputError}
+              />
+            </S.TextAreaWrraperFull>
 
-              <S.TextAreaWrraperFull>
-                <S.LabelTextArea>Coordenadas</S.LabelTextArea>
+            <S.TextAreaWrrapermMid1>
+              <S.LabelTextArea>Número de contrato</S.LabelTextArea>
+              <TextField
+                placeholder="Número de contrato"
+                type="text"
+                {...register('email')}
+                error={errors.password?.message || inputError}
+              />
+            </S.TextAreaWrrapermMid1>
+            <S.TextAreaWrrapermMid2>
+              <span>
+                <S.LabelTextArea>Estado</S.LabelTextArea>
                 <TextField
-                  placeholder="Coordenadas"
-                  {...register('email')}
-                  error={errors.email?.message || inputError}
-                />
-              </S.TextAreaWrraperFull>
-
-              <S.TextAreaWrrapermMid2>
-                <span>
-                  <S.LabelTextArea>Diagnóstico</S.LabelTextArea>
-                  <TextField
-                    type="date"
-                    {...register('email')}
-                    error={errors.password?.message || inputError}
-                  />
-                </span>
-                <span>
-                  <S.LabelTextArea>Material</S.LabelTextArea>
-                  <TextField
-                    type="date"
-                    {...register('email')}
-                    error={errors.password?.message || inputError}
-                  />
-                </span>
-              </S.TextAreaWrrapermMid2>
-              <S.TextAreaWrraperFull>
-                <S.LabelTextArea>Diagnóstico</S.LabelTextArea>
-                <TextField
+                  placeholder="Estado"
                   type="text"
-                  //placeholder="Diagnóstico"
                   {...register('email')}
-                  error={errors.email?.message || inputError}
+                  error={errors.password?.message || inputError}
                 />
-              </S.TextAreaWrraperFull>
-            </S.FormCollum>
-
-            <S.FormCollum>
-              <S.TextAreaWrrapermMid2>
-                <span>
-                  <S.LabelTextArea>Rodovia</S.LabelTextArea>
-                  <TextField
-                    type="date"
-                    {...register('email')}
-                    error={errors.password?.message || inputError}
-                  />
-                </span>
-                <span>
-                  <S.LabelTextArea>Localização</S.LabelTextArea>
-                  <TextField
-                  placeholder="Km"
-
-                    type="date"
-                    {...register('email')}
-                    error={errors.password?.message || inputError}
-                  />
-                </span>
-              </S.TextAreaWrrapermMid2>
-
-              <S.TextAreaWrrapermMid2>
-                <span>
-                  <S.LabelTextArea>Lado</S.LabelTextArea>
-                  <TextField
-                    type="date"
-                    {...register('email')}
-                    error={errors.password?.message || inputError}
-                  />
-                </span>
-                <span>
-                  <S.LabelTextArea>Descrição</S.LabelTextArea>
-                  <TextField
-                  placeholder="Descrição"
-
-                    type="date"
-                    {...register('email')}
-                    error={errors.password?.message || inputError}
-                  />
-                </span>
-              </S.TextAreaWrrapermMid2>
-
-              <S.TextAreaWrrapermMid2>
-                <span>
-                  <S.LabelTextArea>Faixa de dominio</S.LabelTextArea>
-                  <TextField
-                    type="date"
-                    {...register('email')}
-                    error={errors.password?.message || inputError}
-                  />
-                </span>
-             
-              </S.TextAreaWrrapermMid2>
-
-              <S.TextAreaWrraperFull>
-                <S.LabelTextArea>Observação</S.LabelTextArea>
+              </span>
+              <span>
+                <S.LabelTextArea>Periodo</S.LabelTextArea>
                 <TextField
+                  type="date"
                   {...register('email')}
-                  error={errors.email?.message || inputError}
+                  error={errors.password?.message || inputError}
                 />
-              </S.TextAreaWrraperFull>
-            </S.FormCollum>
+              </span>
+              <span>
+                <TextField
+                  type="date"
+                  {...register('email')}
+                  error={errors.password?.message || inputError}
+                />
+              </span>
+            </S.TextAreaWrrapermMid2>
+
             {inputError && (
               <S.ErrorMessage>email ou senha incorretos</S.ErrorMessage>
             )}
@@ -190,4 +123,4 @@ const CityProblems = () => {
   )
 }
 
-export default CityProblems
+export default CadastroRelatorio

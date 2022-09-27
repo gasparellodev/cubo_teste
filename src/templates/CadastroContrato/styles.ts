@@ -16,14 +16,11 @@ export const Form = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-`
-export const FormCollum = styled.div`
-  width: 45%;
-`
 
+`
 export const TextAreaWrraperFull = styled.div`
   width: 100%;
-  div {
+  :first-of-type div {
     max-width: unset;
     background-color: ${theme.colors.white};
   }
@@ -36,19 +33,19 @@ export const LabelTextArea = styled.p`
 `
 
 export const TextAreaWrrapermMid1 = styled.div`
-  width: 50%;
+  width: 48%;
   div {
     max-width: unset;
     background-color: ${theme.colors.white};
   }
-  `
+`
 export const TextAreaWrrapermMid2 = styled.div`
-  width: 100%;
+  width: 48%;
   display: flex;
   align-items: flex-end;
     justify-content: space-between;
     span{
-      width: 36%;
+      width: 31%;
     }
   div {
     max-width: unset;

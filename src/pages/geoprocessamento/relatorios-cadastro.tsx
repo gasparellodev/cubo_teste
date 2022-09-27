@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useProblems } from 'contexts/ProblemsContext'
 import { getAPIClient } from 'services/axios'
 import { CityProblemModel, getCityProblems } from 'services/city-problems'
-import CadstroContrato2 from 'templates/CadstroContrato2'
+import CadastroContrato from 'templates/CadastroRelatorios'
 import { withSSRAuth } from 'utils/withSSRAuth'
 
 type CityProblemsPageProps = {
@@ -20,7 +20,7 @@ export default function CityProblemsPage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cityProblems])
 
-  return <CadstroContrato2 />
+  return <CadastroContrato />
 }
 
 export const getServerSideProps = withSSRAuth(async (ctx) => {

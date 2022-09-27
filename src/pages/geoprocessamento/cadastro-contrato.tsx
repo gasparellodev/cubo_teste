@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useProblems } from 'contexts/ProblemsContext'
 import { getAPIClient } from 'services/axios'
 import { CityProblemModel, getCityProblems } from 'services/city-problems'
-import CadastroRelatorio from 'templates/CadastroRelatorio'
+import CadastroRelatorio from 'templates/CadastroContrato'
 import { withSSRAuth } from 'utils/withSSRAuth'
 
 type CityProblemsPageProps = {

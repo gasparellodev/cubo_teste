@@ -21,7 +21,7 @@ const ControleAtivos = () => {
         <S.Wrapper>
           <S.Title>CDA - Cadastro de Ativos </S.Title>
           <S.CardsWrapper>
-            <Cards label="Processamento" href="">
+            <Cards label="Processamento" href="processamento-de-video">
               <CamEngineIcon />
             </Cards>
             <Cards label="Pós - Processamento" href="">

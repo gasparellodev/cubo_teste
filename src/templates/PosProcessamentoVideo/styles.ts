@@ -11,7 +11,7 @@ export const NavBarWrapper = styled.div`
 `
 
 export const Form = styled.div`
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@ export const TextAreaWrraperFull = styled.div`
   div {
     max-width: unset;
     background-color: ${theme.colors.white};
-    min-height:20rem ;
+    min-height: 20rem;
   }
 `
 
@@ -112,7 +112,9 @@ export const ButtonContent = styled.div`
   display: flex;
   margin-top: 5rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-bottom: 15rem;
+
 
   button {
     margin-right: 15px;
@@ -145,7 +147,7 @@ export const TableLine = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: #e5e5e5;
+  background: #d9d9d9;
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -161,15 +163,19 @@ export const TableLine = styled.div`
     }
   }
   &:nth-child(2n + 0) {
-    background: #d9d9d9;
+    background-color: #e5e5e5;
   }
-  &:nth-last-child(-n + 2) {
+  /* &:nth-last-child(-n + 2) {
+    border-radius: 0px 0px 14px 14px;
+  } */
+  
+  &:last-child{
     border-radius: 0px 0px 14px 14px;
   }
 `
 
 export const TableIconsWrapper = styled.div`
-  width: 80%!important;
+  width: 80% !important;
   margin-left: 13%;
   display: flex;
   justify-content: space-between;
@@ -193,11 +199,11 @@ export const TableStatus = styled.span`
   background-color: #191414;
   border-radius: 10px;
   display: flex;
-  padding:0 5px;
+  padding: 0 5px;
   align-items: center;
   justify-content: center;
-  p{
-    color: #fff!important;
+  p {
+    color: #fff !important;
   }
 `
 
@@ -235,15 +241,15 @@ export const TesteWrraper = styled.div`
   display: flex;
   background-color: transparent !important;
   justify-content: space-between;
-  span{
+  span {
     width: 48%;
   }
-  label{
+  label {
     font-size: 13px;
-    color:#000;
+    color: #000;
     margin-right: 15px;
   }
-  input{
+  input {
     margin-right: 3px;
   }
 `
@@ -253,9 +259,32 @@ export const TesteWrraper1 = styled.div`
   background-color: transparent !important;
   justify-content: space-between;
 
-  label{
-    color:#000;
+  label {
+    color: #000;
     margin-right: 15px;
   }
+`
 
+export const InfoFrameWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+`
+
+export const InfoFrameImage = styled.div`
+  width: 50%;
+`
+export const WrapperInfos = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`
+
+export const InfosFrame = styled.div`
+  width: 50%;
+  height: 30%;
+  color:#000;
+  padding: 0.5rem 0rem 1.5rem 5.5rem;
 `

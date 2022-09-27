@@ -187,9 +187,10 @@ const CadastroRelatorio = () => {
             {inputError && (
               <S.ErrorMessage>email ou senha incorretos</S.ErrorMessage>
             )}
-            {/* <S.ButtonContent>
-              <Button isLoading={loading}>Enviar</Button>
-            </S.ButtonContent> */}
+            <S.ButtonContent>
+              <Button isLoading={loading}>Processar </Button>
+              <Button isLoading={loading}>Cancelar</Button>
+            </S.ButtonContent>
 
             <S.TextAreaWrraperFull>
               <S.LabelTextArea>Nome completo</S.LabelTextArea>

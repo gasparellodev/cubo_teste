@@ -111,13 +111,13 @@ export const ButtonContent = styled.div`
   width: 100%;
   display: flex;
   margin-top: 5rem;
-  //position: absolute;
-  //bottom: -9rem;
   display: flex;
   justify-content: center;
 
   button {
+    margin-right: 15px;
     width: unset;
+    height: 4.4rem;
   }
 `
 

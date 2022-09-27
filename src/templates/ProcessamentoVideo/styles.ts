@@ -178,12 +178,25 @@ export const TableIconsWrapper = styled.div`
 `
 
 export const TableIcon = styled.span`
-  width: 60px;
+  width: 40px;
+  height: 40px;
   background-color: #ffffff;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+`
+
+export const TableStatus = styled.span`
+  width: auto;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  padding:0 5px;
+  align-items: center;
+  justify-content: center;
+  color: red;
 `
 
 export const PaginationLine = styled.div`

@@ -72,7 +72,7 @@ const CadastroRelatorio = () => {
     <>
       <Header />
       <Container>
-        <ReturnLink href="/geoprocessamento/contrato" />
+        <ReturnLink href="/geoprocessamento/controle-de-ativos" />
         <S.Wrapper>
           <S.Title>Processamento de Vídeos</S.Title>
           <S.Form onSubmit={onSubmit}>
@@ -133,14 +133,14 @@ const CadastroRelatorio = () => {
                 </span>
               </S.TesteWrraper1>
               <S.TesteWrraper>
-              <span>
+                <span>
                   <S.LabelTextArea>Característica</S.LabelTextArea>
                   <span>
                     <span>
                       <input
                         type="radio"
                         id="huey"
-                        name="drone"
+                        name="caracteristica"
                         value="huey"
                         checked
                       />
@@ -150,7 +150,7 @@ const CadastroRelatorio = () => {
                       <input
                         type="radio"
                         id="louie"
-                        name="drone"
+                        name="caracteristica"
                         value="louie"
                       />
                       <label htmlFor="louie">Pista simples</label>
@@ -206,6 +206,29 @@ const CadastroRelatorio = () => {
               <div>
                 <p>Nome</p>
               </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+              <div>
+                <p>Nome</p>
+              </div>
               <div>
                 <p>Número</p>
               </div>
@@ -220,22 +243,37 @@ const CadastroRelatorio = () => {
               <div>
                 <p>Nome</p>
               </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
               <div>
                 <p>Número</p>
               </div>
-              <div>
-                <p>00/00/0000</p>
-              </div>
+              <S.TableStatus>
+                <p>cancelado</p>
+                </S.TableStatus>
               <S.TableIconsWrapper>
-                <S.TableIcon
-                  onClick={() => {
-                    setModalOpen(!modalOpen)
-                    console.log('teste')
-                  }}
-                >
-                  <ModifyIcon />
-                </S.TableIcon>
-
                 <S.TableIcon>
                   <DeleIcon />
                 </S.TableIcon>
@@ -246,76 +284,43 @@ const CadastroRelatorio = () => {
               <div>
                 <p>Nome</p>
               </div>
-              <div>
-                <p>Número</p>
-              </div>
-              <div>
-                <p>00/00/0000</p>
-              </div>
-              <S.TableIconsWrapper>
-                <S.TableIcon
-                  onClick={() => {
-                    setModalOpen(!modalOpen)
-                    console.log('teste')
-                  }}
-                >
-                  <ModifyIcon />
-                </S.TableIcon>
-                <S.TableIcon>
-                  <DeleIcon />
-                </S.TableIcon>
-              </S.TableIconsWrapper>
-            </S.TableLine>
 
-            <S.TableLine>
+              <div>
+                <p>Nome</p>
+              </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+
+              <div>
+                <p>Nome</p>
+              </div>
+
               <div>
                 <p>Nome</p>
               </div>
               <div>
                 <p>Número</p>
               </div>
-              <div>
-                <p>00/00/0000</p>
-              </div>
+              <S.TableStatus>
+                <p>cancelado</p>
+                </S.TableStatus>
               <S.TableIconsWrapper>
-                <S.TableIcon
-                  onClick={() => {
-                    setModalOpen(!modalOpen)
-                    console.log('teste')
-                  }}
-                >
-                  <ModifyIcon />
-                </S.TableIcon>
                 <S.TableIcon>
                   <DeleIcon />
                 </S.TableIcon>
               </S.TableIconsWrapper>
             </S.TableLine>
 
-            <S.TableLine>
-              <div>
-                <p>Nome</p>
-              </div>
-              <div>
-                <p>Número</p>
-              </div>
-              <div>
-                <p>00/00/0000</p>
-              </div>
-              <S.TableIconsWrapper>
-                <S.TableIcon
-                  onClick={() => {
-                    setModalOpen(!modalOpen)
-                    console.log('teste')
-                  }}
-                >
-                  <ModifyIcon />
-                </S.TableIcon>
-                <S.TableIcon>
-                  <DeleIcon />
-                </S.TableIcon>
-              </S.TableIconsWrapper>
-            </S.TableLine>
             <S.PaginationLine>
               <S.PaginationBtnWrraper>
                 <S.PaginationBtn>

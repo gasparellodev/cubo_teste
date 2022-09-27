@@ -37,7 +37,7 @@ const signInFormSchema = yup.object().shape({
   password: yup.string().required('senha obrigatória')
 })
 
-const PosProcessamentoVideo = () => {
+const PosProcessamentoVideo3 = () => {
   const [inputError, setInputError] = useState(false)
 
   const {
@@ -216,39 +216,6 @@ const PosProcessamentoVideo = () => {
             </S.TableLine>
           </S.Table>
 
-          <S.InfoFrameWrapper>
-            <S.InfoFrameImage>
-              <Image src={img} />
-            </S.InfoFrameImage>
-            <S.WrapperInfos>
-              <S.InfosFrame > 
-                <p>Item avaliado</p>
-                <span>Item avaliado</span>  
-              </S.InfosFrame>
-              <S.InfosFrame > 
-                <p>Velocidade</p>
-                <span>Velocidade</span>  
-              </S.InfosFrame>
-
-              <S.InfosFrame > 
-                <p>Latitude</p>
-                <span>Latitude</span>  
-              </S.InfosFrame>
-              <S.InfosFrame > 
-                <p>Longitude</p>
-                <span>Longitude</span>  
-              </S.InfosFrame>
-
-              <S.InfosFrame > 
-                <p>SNV</p>
-                <span>SNV</span>  
-              </S.InfosFrame>
-              <S.InfosFrame > 
-                <p>Frame</p>
-                <span>Frame</span>  
-              </S.InfosFrame>
-            </S.WrapperInfos>
-          </S.InfoFrameWrapper>
           
           <S.ButtonContent>
               <Button isLoading={loading}>OK </Button>
@@ -317,4 +284,4 @@ const PosProcessamentoVideo = () => {
   )
 }
 
-export default PosProcessamentoVideo
+export default PosProcessamentoVideo3

@@ -12,17 +12,17 @@ export const NavBarWrapper = styled.div`
 
 export const Form = styled.div`
   margin-bottom: 8rem;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `
 export const TextAreaWrraperFull = styled.div`
   width: 100%;
-  :first-of-type div {
+  div {
     max-width: unset;
     background-color: ${theme.colors.white};
+    min-height:20rem ;
   }
 `
 
@@ -43,10 +43,11 @@ export const TextAreaWrrapermMid2 = styled.div`
   width: 48%;
   display: flex;
   align-items: flex-end;
-    justify-content: space-between;
-    span{
-      width: 31%;
-    }
+  justify-content: flex-start;
+  flex-direction: column;
+  span {
+    width: 31%;
+  }
   div {
     max-width: unset;
     background-color: ${theme.colors.white};
@@ -96,7 +97,6 @@ export const Title = styled.h1`
   margin-top: 7rem;
 `
 
-
 export const ErrorMessage = styled.p`
   ${({ theme }) => css`
     font-size: ${theme.font.content.regular};
@@ -116,11 +116,10 @@ export const ButtonContent = styled.div`
   display: flex;
   justify-content: center;
 
-  button{
+  button {
     width: unset;
   }
 `
-
 
 export const Table = styled.div`
   width: 100%;
@@ -164,7 +163,7 @@ export const TableLine = styled.div`
   &:nth-child(2n + 0) {
     background: #d9d9d9;
   }
-  &:nth-last-child(-n+2) {
+  &:nth-last-child(-n + 2) {
     border-radius: 0px 0px 14px 14px;
   }
 `
@@ -173,7 +172,7 @@ export const TableIconsWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 `
@@ -209,4 +208,39 @@ export const PaginationBtn = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`
+
+export const KmWrraper = styled.span`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`
+export const TesteWrraper = styled.div`
+  width: 100%;
+  display: flex;
+  background-color: transparent !important;
+  justify-content: space-between;
+  span{
+    width: 48%;
+  }
+  label{
+    font-size: 13px;
+    color:#000;
+    margin-right: 15px;
+  }
+  input{
+    margin-right: 3px;
+  }
+`
+export const TesteWrraper1 = styled.div`
+  width: 100%;
+  display: flex;
+  background-color: transparent !important;
+  justify-content: space-between;
+
+  label{
+    color:#000;
+    margin-right: 15px;
+  }
+
 `

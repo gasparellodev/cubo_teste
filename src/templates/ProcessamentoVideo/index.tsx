@@ -68,7 +68,6 @@ const CadastroRelatorio = () => {
       : (document.body.style.overflow = 'hidden')
   }, [modalOpen])
 
-
   return (
     <>
       <Header />
@@ -77,15 +76,6 @@ const CadastroRelatorio = () => {
         <S.Wrapper>
           <S.Title>Processamento de Vídeos</S.Title>
           <S.Form onSubmit={onSubmit}>
-            <S.TextAreaWrraperFull>
-              <S.LabelTextArea>Nome completo</S.LabelTextArea>
-              <TextField
-                placeholder="Nome completo"
-                {...register('email')}
-                error={errors.email?.message || inputError}
-              />
-            </S.TextAreaWrraperFull>
-
             <S.TextAreaWrrapermMid1>
               <S.LabelTextArea>Número de contrato</S.LabelTextArea>
               <TextField
@@ -94,32 +84,104 @@ const CadastroRelatorio = () => {
                 {...register('email')}
                 error={errors.password?.message || inputError}
               />
+              <S.KmWrraper>
+                <span>
+                  <S.LabelTextArea>Periodo</S.LabelTextArea>
+                  <TextField
+                    type="text"
+                    {...register('email')}
+                    error={errors.password?.message || inputError}
+                  />
+                </span>
+                <span>
+                  <S.LabelTextArea>Periodo</S.LabelTextArea>
+                  <TextField
+                    type="text"
+                    {...register('email')}
+                    error={errors.password?.message || inputError}
+                  />
+                </span>
+              </S.KmWrraper>
             </S.TextAreaWrrapermMid1>
+
             <S.TextAreaWrrapermMid2>
+              <S.TesteWrraper1>
+                <span>
+                  <S.LabelTextArea>Estado</S.LabelTextArea>
+                  <TextField
+                    placeholder="Estado"
+                    type="text"
+                    {...register('email')}
+                    error={errors.password?.message || inputError}
+                  />
+                </span>
+                <span>
+                  <S.LabelTextArea>Periodo</S.LabelTextArea>
+                  <TextField
+                    type="date"
+                    {...register('email')}
+                    error={errors.password?.message || inputError}
+                  />
+                </span>
+                <span>
+                  <S.LabelTextArea>Periodo</S.LabelTextArea>
+                  <TextField
+                    type="date"
+                    {...register('email')}
+                    error={errors.password?.message || inputError}
+                  />
+                </span>
+              </S.TesteWrraper1>
+              <S.TesteWrraper>
               <span>
-                <S.LabelTextArea>Estado</S.LabelTextArea>
-                <TextField
-                  placeholder="Estado"
-                  type="text"
-                  {...register('email')}
-                  error={errors.password?.message || inputError}
-                />
-              </span>
-              <span>
-                <S.LabelTextArea>Periodo</S.LabelTextArea>
-                <TextField
-                  type="date"
-                  {...register('email')}
-                  error={errors.password?.message || inputError}
-                />
-              </span>
-              <span>
-                <TextField
-                  type="date"
-                  {...register('email')}
-                  error={errors.password?.message || inputError}
-                />
-              </span>
+                  <S.LabelTextArea>Característica</S.LabelTextArea>
+                  <span>
+                    <span>
+                      <input
+                        type="radio"
+                        id="huey"
+                        name="drone"
+                        value="huey"
+                        checked
+                      />
+                      <label htmlFor="huey">Duplicado</label>
+                    </span>
+                    <span>
+                      <input
+                        type="radio"
+                        id="louie"
+                        name="drone"
+                        value="louie"
+                      />
+                      <label htmlFor="louie">Pista simples</label>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                  <S.LabelTextArea>Sentido</S.LabelTextArea>
+                  <span>
+                    <span>
+                      <input
+                        type="radio"
+                        id="huey"
+                        name="drone"
+                        value="huey"
+                        checked
+                      />
+                      <label htmlFor="huey">Crescente</label>
+                    </span>
+                    <span>
+                      <input
+                        type="radio"
+                        id="louie"
+                        name="drone"
+                        value="louie"
+                      />
+                      <label htmlFor="louie">Decrescente</label>
+                    </span>
+                  </span>
+                </span>
+              </S.TesteWrraper>
             </S.TextAreaWrrapermMid2>
 
             {inputError && (
@@ -128,6 +190,16 @@ const CadastroRelatorio = () => {
             {/* <S.ButtonContent>
               <Button isLoading={loading}>Enviar</Button>
             </S.ButtonContent> */}
+
+            <S.TextAreaWrraperFull>
+              <S.LabelTextArea>Nome completo</S.LabelTextArea>
+              <TextField
+                type={'file'}
+                placeholder="Nome completo"
+                {...register('email')}
+                error={errors.email?.message || inputError}
+              />
+            </S.TextAreaWrraperFull>
           </S.Form>
           <S.Table>
             <S.TableHead>
